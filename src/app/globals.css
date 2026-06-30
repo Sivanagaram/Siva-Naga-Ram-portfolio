@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Theme-aware semantic tokens (consumed by Tailwind: fg / mist / surface / hair).
+     Default (:root) = dark theme, since <html> ships with the `dark` class. */
+  --fg: 255 255 255;        /* primary text — white */
+  --mist: 154 164 191;      /* muted text — #9aa4bf */
+  --surface: 255 255 255;   /* panel fills — white, always used with low alpha */
+  --hair: 255 255 255;      /* hairline borders — white, always used with low alpha */
+}
+
+/* Light theme overrides */
+html:not(.dark) {
+  --fg: 11 14 22;           /* near-ink primary text */
+  --mist: 71 85 105;        /* slate-600 — passes contrast on the paper surface */
+  --surface: 11 14 22;      /* dark fills tinted into the light surface */
+  --hair: 11 14 22;
+}
+
+/* ---- base ---- */
+* { border-color: rgb(var(--hair) / 0.08); }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  @apply bg-ink text-fg antialiased;
+  font-family: var(--font-sans);
+}
+
+/* light mode surface */
+html:not(.dark) body { @apply bg-paper; }
+
+/* ---- selection ---- */
+::selection { @apply bg-violet/40 text-white; }
+
+/* ---- scrollbar ---- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  @apply rounded-full;
+  background: linear-gradient(#22d3ee, #8b5cf6);
+}
+
+/* ---- reusable component layers ---- */
+@layer components {
+  /* Frosted panel — adapts to theme via the surface/hair tokens. */
+  .glass {
+    @apply border border-hair/10 bg-surface/[0.04] backdrop-blur-xl;
+  }
+  .gradient-text {
+    @apply bg-aurora-text bg-clip-text text-transparent;
+  }
+  .section-pad { @apply px-6 py-16 md:px-10 md:py-24; }
+  .container-x { @apply mx-auto w-full max-w-6xl; }
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.3em] text-cyan;
+  }
+}
+
