@@ -9,9 +9,11 @@ const config: Config = {
         // Aurora signature palette
         ink: "#05060a",        // deep space black
         slate: "#0b0e16",      // panel
-        cyan: "#22d3ee",
-        violet: "#8b5cf6",
-        magenta: "#e879f9",
+        // Accents are theme-aware (deeper in light mode for contrast). The vivid
+        // `aurora` gradient below keeps its literal hex, so buttons/logo stay bright.
+        cyan: "rgb(var(--cyan) / <alpha-value>)",
+        violet: "rgb(var(--violet) / <alpha-value>)",
+        magenta: "rgb(var(--magenta) / <alpha-value>)",
         // light-mode surfaces
         paper: "#f7f8fc",
         cloud: "#eef1f8",

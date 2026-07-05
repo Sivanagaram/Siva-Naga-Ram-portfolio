@@ -24,7 +24,7 @@ export function Certifications() {
                 <Reveal key={c.title} delay={i * 0.08}>
                   <div
                     className={cn(
-                      "glass flex items-center gap-4 rounded-2xl p-5",
+                      "glass flex min-h-[7rem] items-center gap-4 rounded-2xl p-5",
                       c.placeholder && "border-dashed opacity-70"
                     )}
                   >
@@ -49,7 +49,7 @@ export function Certifications() {
             <div className="space-y-4">
               {ACHIEVEMENTS.map((a, i) => (
                 <Reveal key={a.title} delay={i * 0.08}>
-                  <div className="glass flex items-start gap-4 rounded-2xl p-5">
+                  <div className="glass flex min-h-[7rem] items-center gap-4 rounded-2xl p-5">
                     <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-aurora-soft text-magenta">
                       <Trophy size={18} />
                     </span>
