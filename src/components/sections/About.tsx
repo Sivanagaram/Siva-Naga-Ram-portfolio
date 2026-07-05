@@ -30,8 +30,8 @@ export function About() {
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr]">
           {/* stats */}
           <Reveal className="grid grid-cols-2 gap-4 self-start">
-            <Stat target={4} suffix="+" label="Years experience" />
-            <Stat target={20} suffix="+" label="Projects shipped" />
+            <Stat target={2} suffix="" label="Years experience" />
+            <Stat target={4} suffix="" label="Projects shipped" />
             <Stat target={5} suffix="" label="Tech domains" />
             <Stat target={100} suffix="%" label="Commitment" />
           </Reveal>

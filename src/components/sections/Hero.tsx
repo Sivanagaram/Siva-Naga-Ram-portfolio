@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import { TYPING_PHRASES, SITE, SOCIALS } from "@/constants";
 import { GradientButton } from "@/components/ui/GradientButton";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
@@ -105,15 +106,17 @@ export function Hero() {
           className="relative mx-auto aspect-square w-64 md:w-full md:max-w-sm"
         >
           <div className="absolute inset-0 animate-blob rounded-full bg-aurora opacity-30 blur-2xl" />
-          <div className="glass relative grid h-full place-items-center overflow-hidden rounded-[2rem]">
-            {/* Replace with <Image src="/avatar.jpg" .../> when you add a photo */}
-            <div className="flex flex-col items-center gap-3 text-center">
-              <div className="grid h-24 w-24 place-items-center rounded-full bg-aurora font-mono text-3xl font-bold text-ink">
-                SR
-              </div>
-              <p className="font-mono text-xs text-mist">your photo here</p>
-            </div>
-            <div className="absolute inset-0 bg-aurora-soft mix-blend-overlay" />
+          <div className="glass relative h-full overflow-hidden rounded-[2rem]">
+            <Image
+              src="/profile.jpg"
+              alt={SITE.name}
+              fill
+              priority
+              sizes="(max-width: 768px) 16rem, 24rem"
+              className="object-cover object-top"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-aurora-soft mix-blend-overlay" />
           </div>
 
           {/* floating accent chips */}
@@ -122,7 +125,7 @@ export function Hero() {
             transition={{ duration: 4, repeat: Infinity }}
             className="glass absolute -left-4 top-10 rounded-xl px-3 py-2 font-mono text-xs"
           >
-            &lt;/&gt; 4+ yrs
+            &lt;/&gt; 2 yrs
           </motion.div>
           <motion.div
             animate={{ y: [0, 10, 0] }}

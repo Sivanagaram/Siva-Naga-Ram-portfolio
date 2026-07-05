@@ -48,7 +48,7 @@ export const TYPING_PHRASES = [
 ];
 
 export const ABOUT_SUMMARY =
-  "Frontend developer with 4+ years building enterprise-grade applications in React and Next.js. I care about interfaces that feel fast, look premium, and stay accessible. Lately I've turned that craft toward AI — pairing strong product engineering with machine learning to build tools that actually get used.";
+  "Frontend developer with 2 years building enterprise-grade applications in React and Next.js. I care about interfaces that feel fast, look premium, and stay accessible. Lately I've turned that craft toward AI — pairing strong product engineering with machine learning to build tools that actually get used.";
 
 export const TIMELINE: TimelineItem[] = [
   {
@@ -70,7 +70,7 @@ export const TIMELINE: TimelineItem[] = [
       "Began studying machine learning, deep learning, and LLMs — shipping AI features into real products.",
   },
   {
-    year: "2025",
+    year: "2026",
     title: "Becoming an AI Engineer",
     description:
       "Bridging frontend craft with applied ML: RAG systems, embeddings, and generative AI interfaces.",
@@ -81,7 +81,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Frontend",
     icon: Code2,
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Redux", "Tailwind CSS", "HTML", "CSS"],
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Redux", "Tailwind CSS", "Styled Components", "HTML", "CSS"],
   },
   {
     title: "Backend",
@@ -91,20 +91,17 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Database",
     icon: Database,
-    skills: ["MySQL", "PostgreSQL", "ClickHouse", "Firebase"],
+    skills: ["MySQL", "PostgreSQL", "ClickHouse"],
   },
   {
     title: "Tools",
     icon: Wrench,
-    skills: ["Git", "GitHub", "Docker", "VS Code", "Postman"],
+    skills: ["Git", "GitHub", "VS Code", "Postman"],
   },
   {
     title: "AI / ML",
     icon: Brain,
-    skills: [
-      "Python", "NumPy", "Pandas", "Machine Learning", "Deep Learning",
-      "Transformers", "LLMs", "Generative AI", "OpenAI APIs", "Embeddings",
-    ],
+    skills: ["Python", "NumPy", "Pandas", "Machine Learning", "Deep Learning"],
   },
 ];
 
@@ -119,17 +116,6 @@ export const PROJECTS: Project[] = [
     githubUrl: "#",
     featured: true,
     accent: "from-cyan/40 to-violet/30",
-  },
-  {
-    title: "AI Trading Platform",
-    description:
-      "Algorithmic trading interface combining market data, model-driven signals, and a fast, focused trading UI.",
-    features: ["Model-driven signals", "Portfolio analytics", "WebSocket feeds", "Backtesting"],
-    tech: ["React", "FastAPI", "Python", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: true,
-    accent: "from-violet/40 to-magenta/30",
   },
   {
     title: "AI Inappropriate Content Detection",
@@ -168,7 +154,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     role: "Frontend Developer",
     company: "TSSS Infotech & Infra",
-    period: "2021 — Present · 4+ years",
+    period: "2024 — Present · 2 years",
     current: true,
     points: [
       "Develop and maintain enterprise applications in React and Next.js",
