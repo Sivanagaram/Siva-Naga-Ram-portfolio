@@ -123,14 +123,14 @@ export function Hero() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity }}
-            className="glass absolute -left-4 top-10 rounded-xl px-3 py-2 font-mono text-xs font-semibold text-cyan"
+            className="absolute -left-4 top-10 rounded-xl border border-white/15 bg-ink/80 px-3 py-2 font-mono text-xs font-semibold text-[#22d3ee] shadow-lg shadow-black/30 backdrop-blur-md"
           >
             &lt;/&gt; 2 yrs
           </motion.div>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 5, repeat: Infinity }}
-            className="glass absolute -right-4 bottom-12 rounded-xl px-3 py-2 font-mono text-xs font-semibold text-magenta"
+            className="absolute -right-4 bottom-12 rounded-xl border border-white/15 bg-ink/80 px-3 py-2 font-mono text-xs font-semibold text-[#e879f9] shadow-lg shadow-black/30 backdrop-blur-md"
           >
             AI/ML
           </motion.div>
