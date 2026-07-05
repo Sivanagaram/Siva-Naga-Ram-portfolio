@@ -67,7 +67,7 @@ export function Hero() {
             className="mt-9 flex flex-wrap gap-3"
           >
             <GradientButton href={SITE.resumeUrl} download>
-              <Download size={16} /> Download résumé
+              <Download size={16} /> Download resume
             </GradientButton>
             <GradientButton href="#projects" variant="ghost">
               <FolderGit2 size={16} /> View projects
@@ -108,31 +108,31 @@ export function Hero() {
           <div className="absolute inset-0 animate-blob rounded-full bg-aurora opacity-30 blur-2xl" />
           <div className="glass relative h-full overflow-hidden rounded-[2rem]">
             <Image
-              src="/profile.jpg"
+              src="/siva-profile.jpg"
               alt={SITE.name}
               fill
               priority
               sizes="(max-width: 768px) 16rem, 24rem"
-              className="object-cover object-top"
+              className="object-cover object-[center_28%]"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
-            <div className="pointer-events-none absolute inset-0 bg-aurora-soft mix-blend-overlay" />
+            {/* subtle bottom fade for depth and to lift the floating chips */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
           </div>
 
           {/* floating accent chips */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity }}
-            className="glass absolute -left-4 top-10 rounded-xl px-3 py-2 font-mono text-xs"
+            className="glass absolute -left-4 top-10 rounded-xl px-3 py-2 font-mono text-xs font-semibold text-cyan"
           >
             &lt;/&gt; 2 yrs
           </motion.div>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 5, repeat: Infinity }}
-            className="glass absolute -right-4 bottom-12 rounded-xl px-3 py-2 font-mono text-xs"
+            className="glass absolute -right-4 bottom-12 rounded-xl px-3 py-2 font-mono text-xs font-semibold text-magenta"
           >
-            AI · ML
+            AI/ML
           </motion.div>
         </motion.div>
       </div>

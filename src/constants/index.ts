@@ -20,10 +20,10 @@ import type {
 } from "@/types";
 
 export const SITE = {
-  name: "Siva Naga Ram",
+  name: "Siva Naga Ram Avanigadda",
   role: "Frontend Developer",
   tagline: "Building AI-powered applications",
-  email: "siva@example.com",
+  email: "sivaavanigadda244@gmail.com",
   resumeUrl: "/resume.pdf",
   // Used for SEO metadataBase, sitemap, robots, and social-preview URLs.
   // Change this to your real Vercel URL (or custom domain) after deploying.
@@ -52,28 +52,22 @@ export const ABOUT_SUMMARY =
 
 export const TIMELINE: TimelineItem[] = [
   {
-    year: "2021",
+    year: "2024",
     title: "Started as a Frontend Developer",
     description:
-      "Joined TSSS Infotech & Infra, building production React applications and design systems.",
+      "Joined TSSS Infotech & Infra, building production React and Next.js applications and design systems.",
   },
   {
-    year: "2023",
-    title: "Led complex dashboards",
+    year: "2025",
+    title: "Built enterprise platforms",
     description:
-      "Owned data-heavy dashboards with real-time charts, performance budgets, and reusable component libraries.",
-  },
-  {
-    year: "2024",
-    title: "Dived into AI",
-    description:
-      "Began studying machine learning, deep learning, and LLMs — shipping AI features into real products.",
+      "Shipped data-heavy dashboards with AG Grid and AG Charts — QA analytics, recruitment tooling, and threat-intel views.",
   },
   {
     year: "2026",
     title: "Becoming an AI Engineer",
     description:
-      "Bridging frontend craft with applied ML: RAG systems, embeddings, and generative AI interfaces.",
+      "Bridging frontend craft with applied ML: document extraction, model dashboards, and AI-powered interfaces.",
   },
 ];
 
@@ -99,7 +93,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: ["Git", "GitHub", "VS Code", "Postman"],
   },
   {
-    title: "AI / ML",
+    title: "AI/ML",
     icon: Brain,
     skills: ["Python", "NumPy", "Pandas", "Machine Learning", "Deep Learning"],
   },
@@ -107,35 +101,38 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: "Threat Intelligence Dashboard",
+    title: "Platform UI — Auto QA & Recruitment",
     description:
-      "Real-time security analytics platform surfacing threats across networks with live charts and incident workflows.",
-    features: ["Live data streaming", "Interactive charts", "Role-based access", "Incident triage"],
-    tech: ["Next.js", "TypeScript", "ClickHouse", "Tailwind"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "Enterprise platform with two modules: an Auto QA suite that scores agent–customer interactions and generates coaching plans, plus a Recruitment suite for resume analysis and candidate assessment.",
+    features: ["QA scoring & coaching plans", "AG Grid / AG Charts dashboards", "Recruitment pipeline", "Candidate & recruiter UI"],
+    tech: ["Next.js", "TypeScript", "AG Grid", "AG Charts", "ClickHouse"],
     featured: true,
     accent: "from-cyan/40 to-violet/30",
   },
   {
-    title: "AI Inappropriate Content Detection",
+    title: "URL Threat Intel Dashboard",
     description:
-      "Computer-vision and NLP pipeline that flags unsafe content in real time with a clean review dashboard.",
-    features: ["Image classification", "Text moderation", "Confidence scoring", "Review queue"],
-    tech: ["Python", "Transformers", "FastAPI", "Next.js"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "Analytics dashboard tracking week-on-week performance of a URL threat-detection model — confusion matrix vs. ground truth, detection rates, latency and cache health for go-live readiness.",
+    features: ["Go-live readiness matrix", "KPI cards & sparklines", "Latency & cache charts", "Auto-generated insights"],
+    tech: ["React 19", "TypeScript", "Recharts", "gRPC", "FastAPI"],
+    featured: true,
+    accent: "from-violet/40 to-magenta/30",
+  },
+  {
+    title: "AI Case Knowledge Extraction",
+    description:
+      "Internal AI tool that reads 50+ page legal settlement documents and extracts structured case data with source citations — cutting case processing from hours to under 15 minutes.",
+    features: ["Multi-PDF extraction", "Parallel AI (OpenAI + Gemini)", "Cited confidence scoring", "Human-in-the-loop review"],
+    tech: ["React 19", "FastAPI", "PostgreSQL", "OpenAI", "Gemini"],
     featured: true,
     accent: "from-magenta/40 to-cyan/30",
   },
   {
-    title: "Portfolio Website",
+    title: "Class-Action Document OCR Platform",
     description:
-      "This site — a performance-first, accessible portfolio with glassmorphism, motion, and a 95+ Lighthouse target.",
-    features: ["Framer Motion", "Dark / light mode", "SEO-ready", "95+ Lighthouse"],
-    tech: ["Next.js 15", "React 19", "Tailwind", "Framer Motion"],
-    liveUrl: "#",
-    githubUrl: "#",
+      "Document-processing platform that imports cases, OCR-extracts fields, and routes documents to reviewers who verify data against claimant records — built to stay resilient through network outages.",
+    features: ["OCR field extraction", "Reviewer verification UI", "Record locking & on-hold", "Offline resilience"],
+    tech: ["React", "TypeScript", "FastAPI", "OCR"],
     featured: false,
     accent: "from-cyan/30 to-violet/30",
   },
@@ -157,10 +154,10 @@ export const EXPERIENCE: ExperienceItem[] = [
     period: "2024 — Present · 2 years",
     current: true,
     points: [
-      "Develop and maintain enterprise applications in React and Next.js",
-      "Integrate REST APIs and build data-driven dashboards with rich charts",
-      "Drive performance optimization across large, long-lived codebases",
-      "Build reusable component libraries adopted across teams",
+      "Built the Platform UI — Auto QA and Recruitment modules — with AG Grid and AG Charts dashboards",
+      "Shipped a URL Threat Intel analytics dashboard: confusion matrix, KPI cards, latency and cache health",
+      "Developed an AI case-knowledge extraction tool for legal documents with cited, reviewable output",
+      "Built a class-action document OCR platform with a resilient reviewer verification UI",
     ],
   },
 ];
@@ -178,7 +175,7 @@ export const ACHIEVEMENTS: Achievement[] = [
 ];
 
 export const SOCIALS: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com", icon: Github },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
+  { label: "GitHub", href: "https://github.com/Sivanagaram", icon: Github },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/siva-naga-ram-avanigadda-00a718240/", icon: Linkedin },
   { label: "Email", href: `mailto:${SITE.email}`, icon: Mail },
 ];
