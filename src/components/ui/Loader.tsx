@@ -24,7 +24,7 @@ export function Loader() {
               transition={{ duration: 0.4 }}
               className="grid h-16 w-16 place-items-center rounded-2xl bg-aurora font-mono text-2xl font-bold text-ink"
             >
-              SR
+              SA
             </motion.div>
             <div className="h-0.5 w-40 overflow-hidden rounded-full bg-white/10">
               <motion.div
