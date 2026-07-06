@@ -163,9 +163,10 @@ export const EXPERIENCE: ExperienceItem[] = [
 ];
 
 export const CERTIFICATIONS: Certification[] = [
-  { title: "Meta Front-End Developer", issuer: "Coursera · Meta", year: "2023" },
-  { title: "Deep Learning Specialization", issuer: "Coursera · DeepLearning.AI", year: "2024" },
-  { title: "Add your certification", issuer: "Issuer", year: "—", placeholder: true },
+  { title: "AI Foundations", issuer: "ISTE · IBM SkillsBuild" },
+  { title: "Data Science Foundations — Level 1", issuer: "IBM Skills Network", year: "Foundational" },
+  { title: "Data Science Tools", issuer: "IBM Skills Network", year: "Foundational" },
+  { title: "IBM Blockchain Essentials V2", issuer: "IBM Blockchain", year: "Foundational" },
 ];
 
 export const ACHIEVEMENTS: Achievement[] = [
