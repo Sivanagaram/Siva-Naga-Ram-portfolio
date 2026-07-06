@@ -18,7 +18,7 @@ export function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 md:px-6">
       <nav className="glass container-x flex items-center justify-between rounded-2xl px-4 py-3 md:px-6">
         <Link href="#home" className="flex items-center gap-2 font-mono text-sm font-bold">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-aurora text-ink">SR</span>
+          <span className="grid h-8 w-8 place-items-center rounded-lg bg-aurora text-ink">SA</span>
           <span className="hidden sm:inline">{SITE.name}</span>
         </Link>
 
