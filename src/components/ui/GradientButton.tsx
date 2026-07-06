@@ -7,7 +7,7 @@ interface Props {
   href: string;
   children: ReactNode;
   variant?: "solid" | "ghost";
-  download?: boolean;
+  download?: boolean | string;
   external?: boolean;
   className?: string;
 }
