@@ -66,7 +66,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="mt-9 flex flex-wrap gap-3"
           >
-            <GradientButton href={SITE.resumeUrl} download>
+            <GradientButton href={SITE.resumeUrl} download="SivaNagaRam-Profile.pdf">
               <Download size={16} /> Download resume
             </GradientButton>
             <GradientButton href="#projects" variant="ghost">
