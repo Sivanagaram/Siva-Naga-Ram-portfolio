@@ -40,7 +40,7 @@ export interface TimelineItem {
 export interface Certification {
   title: string;
   issuer: string;
-  year: string;
+  year?: string;
   placeholder?: boolean;
 }
 
