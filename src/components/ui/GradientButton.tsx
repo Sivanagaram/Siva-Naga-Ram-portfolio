@@ -22,14 +22,26 @@ export function GradientButton({
     variant === "solid"
       ? "bg-aurora text-ink shadow-lg shadow-violet/25 hover:shadow-violet/40 hover:-translate-y-0.5"
       : "glass text-fg hover:bg-surface/10";
+  const classes = cn(base, styles, className);
+
+  // Downloads and external links must use a native anchor — next/link routing
+  // would hijack the click and bypass the `download` attribute / new-tab behavior.
+  if (download || external) {
+    return (
+      <a
+        href={href}
+        download={download}
+        target={external ? "_blank" : undefined}
+        rel={external ? "noopener noreferrer" : undefined}
+        className={classes}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      download={download}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noopener noreferrer" : undefined}
-      className={cn(base, styles, className)}
-    >
+    <Link href={href} className={classes}>
       {children}
     </Link>
   );

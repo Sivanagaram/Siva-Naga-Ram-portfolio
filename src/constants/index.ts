@@ -75,12 +75,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Frontend",
     icon: Code2,
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Redux", "Tailwind CSS", "Styled Components", "HTML", "CSS"],
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "Redux", "Tailwind CSS", "Styled Components", "Bootstrap", "HTML", "CSS"],
   },
   {
     title: "Backend",
     icon: Server,
-    skills: ["Python", "FastAPI", "Node.js", "REST APIs"],
+    skills: ["Python", "Django", "FastAPI", "Node.js", "REST APIs"],
   },
   {
     title: "Database",
