@@ -24,7 +24,7 @@ export const SITE = {
   role: "Frontend Developer",
   tagline: "Building AI-powered applications",
   email: "sivaavanigadda244@gmail.com",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/SivaNagaRam-Profile.pdf",
   // Used for SEO metadataBase, sitemap, robots, and social-preview URLs.
   // Change this to your real Vercel URL (or custom domain) after deploying.
   url: "https://siva-portfolio.vercel.app",

@@ -48,11 +48,11 @@ Your EmailJS template should accept the variables: `name`, `email`, `subject`, `
 
 All copy and data live in **`src/constants/index.ts`** — edit one file to update your name, role, bio, skills, projects, experience, certifications, achievements, and social links.
 
-Replace these placeholder assets in `public/`:
-- `resume.pdf` — your actual résumé
+Replace these assets in `public/`:
+- `SivaNagaRam-Profile.pdf` — the résumé served by the Download button (path set via `SITE.resumeUrl`)
+- `siva-profile.jpg` — the hero profile photo (rendered in `src/components/sections/Hero.tsx`)
 - `favicon.svg` — your icon (or add a PNG and update `src/app/layout.tsx`)
 - `og.svg` — your social share image (1200×630)
-- Add `avatar.jpg` and swap the placeholder in `src/components/sections/Hero.tsx` for a Next.js `<Image>`
 
 ## Project structure
 
