@@ -4,8 +4,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ABOUT_SUMMARY, TIMELINE } from "@/constants";
 import { useCounter } from "@/hooks/useCounter";
 
-function Stat({ target, suffix, label }: { target: number; suffix: string; label: string }) {
-  const { value, ref } = useCounter(target);
+function Stat({ target, suffix, label, decimals = 0 }: { target: number; suffix: string; label: string; decimals?: number }) {
+  const { value, ref } = useCounter(target, 1400, decimals);
   return (
     <div className="glass rounded-2xl p-5 text-center">
       <span ref={ref} className="gradient-text text-3xl font-bold md:text-4xl">
@@ -30,7 +30,7 @@ export function About() {
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr]">
           {/* stats */}
           <Reveal className="grid grid-cols-2 gap-4 self-start">
-            <Stat target={2} suffix="" label="Years experience" />
+            <Stat target={2.6} decimals={1} suffix="" label="Years experience" />
             <Stat target={4} suffix="" label="Projects shipped" />
             <Stat target={5} suffix="" label="Tech domains" />
             <Stat target={100} suffix="%" label="Commitment" />

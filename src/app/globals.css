@@ -31,6 +31,10 @@ html:not(.dark) {
 /* ---- base ---- */
 * { border-color: rgb(var(--hair) / 0.08); }
 
+@media (min-width: 1024px) {
+  html.mac-desktop { zoom: 1.25; }
+}
+
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

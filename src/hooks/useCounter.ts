@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-/** Animates a number from 0 to target once it scrolls into view. */
-export function useCounter(target: number, duration = 1400) {
+export function useCounter(target: number, duration = 1400, decimals = 0) {
   const [value, setValue] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
@@ -18,7 +17,8 @@ export function useCounter(target: number, duration = 1400) {
           const tick = (now: number) => {
             const p = Math.min((now - start) / duration, 1);
             const eased = 1 - Math.pow(1 - p, 3);
-            setValue(Math.round(eased * target));
+            const factor = 10 ** decimals;
+            setValue(Math.round(eased * target * factor) / factor);
             if (p < 1) requestAnimationFrame(tick);
           };
           requestAnimationFrame(tick);
@@ -28,7 +28,7 @@ export function useCounter(target: number, duration = 1400) {
     );
     obs.observe(node);
     return () => obs.disconnect();
-  }, [target, duration]);
+  }, [target, duration, decimals]);
 
   return { value, ref };
 }

@@ -48,7 +48,7 @@ export const TYPING_PHRASES = [
 ];
 
 export const ABOUT_SUMMARY =
-  "Frontend developer with 2 years building enterprise-grade applications in React and Next.js. I care about interfaces that feel fast, look premium, and stay accessible. Lately I've turned that craft toward AI — pairing strong product engineering with machine learning to build tools that actually get used.";
+  "Frontend developer with 2.6 years building enterprise-grade applications in React and Next.js. I care about interfaces that feel fast, look premium, and stay accessible. Lately I've turned that craft toward AI — pairing strong product engineering with machine learning to build tools that actually get used.";
 
 export const TIMELINE: TimelineItem[] = [
   {
@@ -151,7 +151,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     role: "Frontend Developer",
     company: "TSSS Infotech & Infra",
-    period: "2024 — Present · 2 years",
+    period: "2024 — Present · 2.6 years",
     current: true,
     points: [
       "Built the Platform UI — Auto QA and Recruitment modules — with AG Grid and AG Charts dashboards",

@@ -33,14 +33,19 @@ export function Contact() {
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
+    if (!serviceId || !templateId || !publicKey) {
+      // Keys not configured — don't fake success (the message would be lost).
+      console.warn(
+        "[Contact] EmailJS env vars missing — set NEXT_PUBLIC_EMAILJS_SERVICE_ID, " +
+          "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID and NEXT_PUBLIC_EMAILJS_PUBLIC_KEY in .env.local."
+      );
+      toast.error("Contact form isn't configured yet. Please email me directly.");
+      return;
+    }
+
     setSending(true);
     try {
-      if (serviceId && templateId && publicKey) {
-        await emailjs.send(serviceId, templateId, values, { publicKey });
-      } else {
-        // No keys configured yet — simulate success in development.
-        await new Promise((r) => setTimeout(r, 800));
-      }
+      await emailjs.send(serviceId, templateId, values, { publicKey });
       toast.success("Message sent — I'll get back to you soon.");
       reset();
     } catch {

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: `${SITE.name} — ${SITE.role}`,
     template: `%s · ${SITE.name}`,
   },
-  description: `${SITE.name} is a ${SITE.role.toLowerCase()} ${SITE.tagline.toLowerCase()}. 2 years of experience in React, Next.js, and applied AI.`,
+  description: `${SITE.name} is a ${SITE.role.toLowerCase()} ${SITE.tagline.toLowerCase()}. 2.6 years of experience in React, Next.js, and applied AI.`,
   keywords: [
     "Siva Naga Ram", "Frontend Developer", "React", "Next.js", "TypeScript",
     "AI Engineer", "Machine Learning", "Portfolio",
@@ -50,6 +50,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${mono.variable} dark`} suppressHydrationWarning>
       <body>
+        {/* macOS desktop renders web content at true 100% (unlike Windows, which
+            magnifies at its default ~125% OS scale). Flag Mac desktop so CSS can
+            re-apply that scale — runs before paint to avoid a resize flash.
+            iPads report as "Mac" but are excluded via touch-point detection. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var ua=navigator.userAgent;var isMac=/Macintosh|Mac OS X/.test(ua)||(navigator.platform&&navigator.platform.indexOf('Mac')===0);var isTouch=navigator.maxTouchPoints>1;if(isMac&&!isTouch){document.documentElement.classList.add('mac-desktop');}}catch(e){}})();",
+          }}
+        />
         <ThemeProvider>
           {children}
           <Toaster

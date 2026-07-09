@@ -103,7 +103,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="relative mx-auto aspect-square w-64 md:w-full md:max-w-sm"
+          className="relative mx-auto aspect-square w-52 md:w-full md:max-w-xs"
         >
           <div className="absolute inset-0 animate-blob rounded-full bg-aurora opacity-30 blur-2xl" />
           <div className="glass relative h-full overflow-hidden rounded-[2rem]">
@@ -112,7 +112,7 @@ export function Hero() {
               alt={SITE.name}
               fill
               priority
-              sizes="(max-width: 768px) 16rem, 24rem"
+              sizes="(max-width: 768px) 13rem, 20rem"
               className="object-cover object-[center_28%]"
             />
             {/* subtle bottom fade for depth and to lift the floating chips */}
@@ -125,7 +125,7 @@ export function Hero() {
             transition={{ duration: 4, repeat: Infinity }}
             className="absolute -left-4 top-10 rounded-xl border border-white/15 bg-ink/80 px-3 py-2 font-mono text-xs font-semibold text-[#22d3ee] shadow-lg shadow-black/30 backdrop-blur-md"
           >
-            &lt;/&gt; 2 yrs
+            &lt;/&gt; 2.6 yrs
           </motion.div>
           <motion.div
             animate={{ y: [0, 10, 0] }}

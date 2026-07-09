@@ -11,7 +11,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="04 · Experience"
           title="Where I've built things"
-          subtitle="Two years shipping enterprise applications and design systems."
+          subtitle="Two and a half years shipping enterprise applications and design systems."
         />
 
         <ol className="relative space-y-8 border-l border-hair/15 pl-8">
